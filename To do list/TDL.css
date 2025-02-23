@@ -1,0 +1,232 @@
+body{
+    font-family: Verdana, sans-serif;
+    margin:  0;
+    overflow-y: scroll;
+    padding: 100px;
+    background-color: #A9B1D6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Container{
+    overflow-y: auto;
+    text-align: center;
+    width: 100%;
+    background-color: #D5C8E5;
+    height: 400px;
+    max-width: 600px;
+    min-width: 412px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #d5c8e52f;
+    transition: 0.3s;
+}
+.TDL{
+    text-align: center;
+    padding-top: 10px;
+}
+input[type="text"]{
+    margin-top: 20px;
+    caret-color: #3C3C3C;
+    /* width: 100px; */
+    /* margin-top: 10px; */
+    /* padding: 12px, 20px; */
+    /* height: 50px;
+    */
+    /* border-radius: 5px;
+    border: none; */
+    /* padding: 0.8rem; */
+    /* font-size: 1rem;
+    margin-right: 1rem;
+     */
+}
+input[type="text"]:focus{
+    box-shadow: 5px 5px 15px #a29baa;
+    outline: none;
+}
+.todo{
+    display: flex;
+    align-items: center;
+}
+.todo-text{
+
+    padding: 15px;
+    padding-right: 0;
+    flex-grow: 1;
+    transition: 200ms ease;
+}
+button{
+    margin-bottom: 20px;
+    height: 50px;
+    width: 60px;
+    border-radius: 5px;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+    background-color: #3C3C3C;
+    cursor: pointer;
+    position: relative;
+}
+button:hover{
+    background-color: #a09d9df8;
+    transition: 200m ease-in-out;
+}
+.delete-button{
+    padding: 3px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.delete-button:hover{
+color: red;
+}
+input[type="checkbox"]:checked ~ .custom-checkbox{
+   background-color: #3C3C3C; 
+}
+input[type="checkbox"]:checked ~ .custom-checkbox{
+    fill:#3C3C3C;
+}
+input[type="checkbox"]:checked ~ .todo-text{
+    color:#3C3C3C;
+    text-decoration: line-through;
+}
+input[type="checkbox"]{
+    display: none;
+}
+.custom-checkbox{
+    border: 2px solid #a09d9df8;
+    border-radius: 5px;
+    min-height: 20px;
+    min-width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: 200ms ease;
+    cursor: pointer;
+}
+#taskList{
+    background-color: #ffffff;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    height: 50px;
+    width: 400px;
+    position: relative;
+}
+#newtask input{
+    height: 50px;
+    width: 400px;
+    border-radius: 5px;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+    position: relative;
+}
+#newtask input:focus{
+    box-shadow: 5px 5px 15px #a29baa;
+    outline: none;
+}
+.task span{
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+.task button{
+    background-color: #a29baa;
+    color: #ffffff;
+    height: 100%;
+    width: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.completed{
+    text-decoration: line-through;
+}
+.enterTask{
+    width: 30px;
+}
+
+@media(max-width: 412px){
+    html{
+        font-size: 37.5%;
+    }
+/* Styles for screens with a max-width of 412px */
+@media (max-width: 412px) {
+    html {
+        font-size: 37.5%;
+    }
+    
+    #content {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input#enterTask {
+        margin-bottom: 10px;
+    }
+
+    button.addBtn {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    li.todo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    label.todo-text {
+        margin-bottom: 10px;
+    }
+
+    button.delete-button {
+        align-self: flex-end;
+    }
+}
+
+/* @media (max-width: 412px) {
+    #content {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input#enterTask {
+        margin-bottom: 10px;
+    }
+
+    button.addBtn {
+        margin-left: 0;
+    }
+
+    li.todo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    label.todo-text {
+        margin-bottom: 10px;
+    }
+
+    button.delete-button {
+        align-self: flex-end;
+    }
+} */
+
+}
